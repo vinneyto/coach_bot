@@ -1,0 +1,24 @@
+{
+  "name": "coach-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "lint": "bun x biome check .",
+    "format": "bun x biome format --write ."
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "grammy": "^1.36.1",
+    "googleapis": "^148.0.0",
+    "openai": "^4.78.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "bun-types": "^1.3.8",
+    "typescript": "^5.9.3"
+  }
+}

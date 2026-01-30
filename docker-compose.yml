@@ -1,0 +1,10 @@
+services:
+  coach-bot:
+    build: .
+    env_file:
+      - .env
+    restart: unless-stopped
+    # volumes:
+    #   # Mount your Google service account json if using GOOGLE_CREDENTIALS_PATH
+    #   - ./google-service-account.json:/run/secrets/google-service-account.json:ro
+
