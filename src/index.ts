@@ -162,6 +162,11 @@ async function main(): Promise<void> {
     const snapshot = await store.getSnapshot();
     const action = await interpret(openai, cfg.OPENAI_MODEL, text, snapshot);
 
+    if (action.kind === "noop") {
+      await ctx.reply(action.summary);
+      return;
+    }
+
     const id = randomId();
     pending.set(key, { id, action, originalText: text, createdAt: Date.now() });
 
